@@ -14,5 +14,22 @@ Projeto para apresentação do 1º Evento Go!
 
 ## Variáveis de Ambiente
 
+- GOPATH
 
+- GOROOT
 
+## Arquivos go.mod e go.sum
+
+- go.mod
+
+- go.sum
+
+# Exemplo de códigos
+
+## go-code-1
+
+## go-code-2
+
+## go-code-3
+
+## go-code-4

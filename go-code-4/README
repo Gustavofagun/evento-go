@@ -1,0 +1,11 @@
+curl http://127.0.0.1:8080/savequery?nome=gustavo -v
+curl http://127.0.0.1:8080/saveheader -H @{'X-Endereco' = 'rua qualquer'} -v
+curl http://127.0.0.1:8080/get?item=endereco -v
+curl http://127.0.0.1:8080/get?item=nome -v
+
+docker build -t evento-go/go-code-4-app:latest --target app .
+docker build -t evento-go/go-code-4-redis:latest --target redis .
+docker run -d -p 6379:6379 --name redis evento-go/go-code-4-redis
+docker run -d  -p 8080:8080 --name app --link redis:redislink evento-go/go-code-4-app
+
+docker rm -f $(docker ps -a -q)

@@ -18,8 +18,8 @@ func connectRedis() *redis.Client {
 
 func main() {
 	http.HandleFunc("/ping", pingDb)
-	http.HandleFunc("/savequery", saveQueryDb)
-	http.HandleFunc("/saveheader", saveHeaderDb)
+	http.HandleFunc("/v1/nome", saveQueryDb)
+	http.HandleFunc("/v1/endereco", saveHeaderDb)
 	http.HandleFunc("/get", getInfo)
 	log.Println("Run Server port:8080")
 	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))

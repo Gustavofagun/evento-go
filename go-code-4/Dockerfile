@@ -10,3 +10,4 @@ CMD ["./main"]
 FROM redis:7.0.11-alpine3.17 as redis
 EXPOSE 6379
 CMD ["redis-server"]
+ 
